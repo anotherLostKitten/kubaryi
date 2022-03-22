@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'Card';
+	src: url('Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Points';
+	src: url('Montserrat-BoldItalic.ttf') format('truetype');
+}
+
+svg.cardnum mask text {
+	font-family: 'Card';
+	font-size: 100px;
+}
+svg.cardnum mask text.points {
+	font-family: 'Points';
+	font-size: 15px;
+}
+
+.card {
+	width: 120px;
+	height: 175px;
+	padding: 4px;
+	border: 4px solid #2a2a2a;
+	margin: 5px;
+	border-radius: 11px;
+	transition: transform 50ms;
+}
+.card:hover {
+	transform: scale(1.1);
+}
+.card div {
+	background-color: #2a2a2a;
+	border-radius: 3px;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	mask-image: url(#b);
+	mask-type: luminance;
+	mask-size: contain;
+	mask-position: 50% 50%;
+	mask-repeat: no-repeat;
+}
+
+
+.realgar {
+	background: #c31313;
+	background: linear-gradient(0deg, #a72d2d 0%, #862020 33%, #8f0a0a 64%, #ba1142 84%, #c31313 100%); 
+}
+.calcite {
+	background: #dfdfdf;
+	background: linear-gradient(0deg, #b0a69b 0%, #dfdfdf 38%, #e2f1f1 73%, #d0d4e2 100%); 
+}
+.onyx {
+	background: #000000;
+	background: linear-gradient(0deg, #000000 0%, #1c1c1c 33%, #636363 65%, #0a0a0a 80%); 
+}
+.ametrine {
+	background: #ece613;
+	background: linear-gradient(0deg, #b6aa32 0%, #ece613 45%, #3e0f8e 85%, #9f1ed5 100%); 
+}
+.citrine {
+	background: #ece613;
+	background: linear-gradient(0deg, #b6aa32 0%, #ece613 40%, #d5cd3d 100%);
+}
+.dioptase {
+	background: #008c65;
+	background: linear-gradient(0deg, #10622b 0%, #008c65 30%, #0f8e88 69%, #0fac6e 100%); 
+}
