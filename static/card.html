@@ -7,6 +7,15 @@
 	  <tr>
 		<td>
 		  <svg viewBox="0 0 128 183">
+			<rect fill="white"/>
+			<rect mask="url(#kubaryi)" fill="url(#kubaryi_gradient)"/>
+	  		<image href="kubaryi_export.svg" width="96" x="16" y="44"/>
+		  </svg>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <svg viewBox="0 0 128 183">
 			<rect fill="url(#realgar)" />
 			<rect mask="url(#num2)" />
 		  </svg>
@@ -638,6 +647,21 @@
 		  <rect x="96" y="151" width="20" height="20" fill="black" />
 		  <text x="106" y="161" text-anchor="middle" dominant-baseline="central" fill="white" class="points" transform="rotate(180)" transform-origin="106 161">15</text>
 		</mask>
+
+		<mask id="kubaryi">
+		  <rect x="0" y="0" width="100%" height="100%" fill="white" />
+		  <rect x="12" y="12" width="20" height="20" fill="black" />
+		  <text x="22" y="22" text-anchor="middle" dominant-baseline="central" fill="white" class="points">20</text>
+		  <rect x="96" y="151" width="20" height="20" fill="black" />
+		  <text x="106" y="161" text-anchor="middle" dominant-baseline="central" fill="white" class="points" transform="rotate(180)" transform-origin="106 161">20</text>
+		</mask>
+
+		<linearGradient id="kubaryi_gradient" x1="0" x2="0" y1="1" y2="0">
+		  <stop offset="0%" stop-color="#530c51"/>
+		  <stop offset="33%" stop-color="#700c83"/>
+		  <stop offset="65%" stop-color="#6d00ac"/>
+		  <stop offset="95%" stop-color="#7f32c2"/>
+		</linearGradient>
 		
 		<linearGradient id="realgar" x1="0" x2="0" y1="1" y2="0">
 		  <stop offset="0%" stop-color="#a72d2d"/>
