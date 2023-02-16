@@ -1,6 +1,7 @@
 #include"gamestate.h"
 #include<stdio.h>
-
+#include<stdlib.h>
+#include<time.h>
 char encode_state(struct state*s){
   return s->mode&3|s->turn<<2&4|s->trmp<<3&24;
 }
@@ -28,6 +29,14 @@ void initcd(struct ss*s){
 	for(int v=0;v<14;v++)
 	  s->h0[c*14+v]=c<<4|(v+2);
   s->k[4]=64;
+}
+void shfcd(struct ss*s){
+  for(int i=0;i<56;i++){
+    int r=rand()%(57-i)+i;
+	char tmp=s->h0[i];
+	s->h0[i]=s->h0[r];
+	s->h0[r]=tmp;
+  }
 }
 void printcd(char crd){
   switch(crd&112){
@@ -74,8 +83,10 @@ void printcds(struct ss*s){
   }
   putchar('\n');
 }
-int main() {
+int main(){
+  srand(time(0));
   struct ss s;
   initcd(&s);
+  shfcd(&s);
   printcds(&s);
 }
